@@ -9,7 +9,7 @@ class auditd::params {
       $rules_file         = '/etc/audit/rules.d/audit.rules'
 
       case $::lsbmajdistrelease {
-        '8': {
+        '8', '9': {
           $service_restart = '/bin/systemctl restart auditd'
           $service_stop    = '/bin/systemctl stop auditd'
         }
